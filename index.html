@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lern-App kostenlos erhalten | Anna</title>
+<meta name="description" content="Trag deine E-Mail-Adresse ein und bekomm die Lern-App für Grundschulkinder kostenlos.">
+<link rel="preload" href="fonts/mplusrounded1c-800-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Instagram から「メール登録の特典＝アプリ」を知って来た人向け。
+     説得はしない：フォームを最初に置き、その下にアプリのベネフィットだけを並べる（2026-10-01 ユーザー決定）。
+     見せるカードは無料プランで実際にもらえる夏の N・R だけ（SR・UR は有料限定なので見せない） -->
+<header class="sky">
+  <div class="wrap">
+    <p class="eyebrow">Anna · Lernen ohne Elternstress</p>
+    <h1>Lern-App kostenlos erhalten</h1>
+    <div class="form-card" id="anmelden">
+      <img class="peek" src="img/hanabi-happy.webp" alt="" width="78" height="89">
+      <p class="lead">Trag deine E-Mail-Adresse ein. Den Link zur App bekommst du per E-Mail.</p>
+      <!-- Brevo のフォームを貼らず、自前の入力欄から Brevo へ直接送る（外部の読み込みなし）。
+           送信先・欄の名前・同意の文言は Brevo の埋め込みコードから取った（signup/README.md）。
+           送信後の画面は Brevo のフォーム設定の「Confirmation page」で bestaetigen.html を指定する -->
+      <form class="signup-form" method="POST" action="https://441955ff.sibforms.com/serve/MUIFAOcOnZpMTYvK8WxBf8Yg1jZERSGYU1wC4qX08f31B5-PizUw7z7081di8zzs6PFxu_fulDU3MDDm7eAEdUvVtTD3KqO_KPW-I593fM9-kL_qgz8FaRoLPg2IcL7symxbAnjCYCEFukNo3HWGekkEF-fHZ8GDuJooZfKxCM5BbRkoCZlOP_rPICoowyfsgInIFsfpOkM_CwxdnQ==">
+        <label class="field-label" for="EMAIL">Deine E-Mail-Adresse</label>
+        <input class="field" type="email" id="EMAIL" name="EMAIL" autocomplete="email" inputmode="email"
+               placeholder="vorname@beispiel.de" required>
+        <label class="consent" for="OPT_IN">
+          <input type="checkbox" id="OPT_IN" name="OPT_IN" value="1" required>
+          <span>Ja, ich möchte E-Mails von Anna (Comagoto) erhalten. Ich kann mich jederzeit über den Link
+          am Ende jeder E-Mail abmelden.</span>
+        </label>
+        <button class="submit" type="submit">App-Link per E-Mail erhalten</button>
+        <input class="trap" type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        <input type="hidden" name="locale" value="de">
+      </form>
+      <p class="small">Du bekommst zuerst eine E-Mail zur Bestätigung. Mehr dazu in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="benefits-section">
+    <h2>Was dir die App abnimmt</h2>
+    <ul class="benefits">
+      <li>
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3z"/></svg></span>
+        <p><strong>Du musst nicht daneben sitzen.</strong>Zu jeder Aufgabe gibt es einen Hinweis und eine Erklärung.</p>
+      </li>
+      <li>
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 0 0-14.3-4.9L4 8M4 3v5h5M4 13a8 8 0 0 0 14.3 4.9L20 16M20 21v-5h-5"/></svg></span>
+        <p><strong>Du musst dir keine Fehler merken.</strong>Falsch beantwortete Aufgaben kommen nach 1, 3, 7 und 20 Tagen von allein wieder.</p>
+      </li>
+      <li>
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.4 6.8 19.2l1-5.9L3.5 9.2l5.9-.8z"/></svg></span>
+        <p><strong>Du musst nicht antreiben.</strong>Für richtige Antworten gibt es Punkte und Sammelkarten – kaufen kann man sie nicht.</p>
+      </li>
+      <li>
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg></span>
+        <p><strong>Kurz genug für jeden Abend.</strong>Eine Runde sind 10 Aufgaben.</p>
+      </li>
+    </ul>
+
+    <figure class="cards">
+      <div class="fan">
+        <img src="img/card-r1.webp" alt="Sammelkarte „Herr des großen BUMM“" width="700" height="940" loading="lazy">
+        <img src="img/card-n1.webp" alt="Sammelkarte „Funkenkobold“" width="700" height="940" loading="lazy">
+        <img src="img/card-r6.webp" alt="Sammelkarte „Glühwürmchenlicht“" width="700" height="940" loading="lazy">
+      </div>
+      <figcaption>Sammelkarten aus der App</figcaption>
+    </figure>
+
+    <ul class="facts">
+      <li>Mathe Klasse 1–6</li>
+      <li>Englisch ab Klasse 3</li>
+      <li>Keine Werbung</li>
+      <li>Im Browser, ohne Installation</li>
+    </ul>
+  </section>
+
+  <footer>
+    <a href="impressum.html">Impressum</a>
+    <a href="datenschutz.html">Datenschutz</a>
+  </footer>
+</main>
+<script>
+// Brevo は通常の送信だと {"success":true} を返すだけでページを移動しない。
+// ページ内で送り、成功したら送信直後のページへ移る（Brevo のスクリプトは読み込まない）。
+(function () {
+  var form = document.querySelector(".signup-form");
+  if (!form || !window.fetch) return;
+  var button = form.querySelector(".submit");
+  var status = document.getElementById("form-status");
+  var MSG = { sending: "Wird gesendet…", error: "Das hat nicht geklappt. Prüf deine E-Mail-Adresse und versuch es noch einmal." };
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (!form.reportValidity()) return;
+    button.disabled = true;
+    status.textContent = MSG.sending;
+    status.className = "form-status";
+    fetch(form.action, { method: "POST", body: new FormData(form) })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        if (data && data.success) {
+          window.location.href = "bestaetigen.html";
+        } else {
+          throw new Error("rejected");
+        }
+      })
+      .catch(function () {
+        status.textContent = MSG.error;
+        status.className = "form-status form-status--error";
+        button.disabled = false;
+      });
+  });
+})();
+</script>
+</body>
+</html>
